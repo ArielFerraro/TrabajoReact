@@ -1,0 +1,23 @@
+header {
+    display: flex;
+    justify-content:center ;
+    align-items:center;
+    border: solid black;
+    background-color: rgb(8, 8, 8);
+    
+}
+
+h1 {
+    margin-left: 15px;
+    padding-right: 100px;
+    color:rgb(228, 187, 24);
+    font-family:'Times New Roman', Times, serif;
+    
+}
+
+
+body {
+background-color:rgb(228, 187, 24) ;
+}
+
+
