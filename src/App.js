@@ -5,10 +5,13 @@ import ItemListContainter from  './components/ItemListContainer'
 import CartWidget from './components/CartWidget';
 
 
-const App = (greeting) => {
-  const {} = greeting
+const App = () => {
+  
   return (
+    <>
       <NavBar></NavBar>
+      <ItemListContainter greeting="Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quae voluptatem rem tempore consequuntur nobis iure ipsa voluptas. Beatae incidunt sint magni quisquam labore quae molestias pariatur nemo optio recusandae!"/>
+      </>
   );
 
 }
