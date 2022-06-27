@@ -14,6 +14,7 @@ const NavBar = () => {
         <Button href='#' variant="warning">CONTACTO</Button>
         <CartWidget/>
         </header> 
+
     )
 }
 

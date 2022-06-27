@@ -2,8 +2,8 @@ header {
     display: flex;
     justify-content:center ;
     align-items:center;
-    border: solid black;
-    background-color: rgb(255, 252, 252);
+    border: solid rgb(221, 216, 216);
+    background-color: rgb(255, 254, 254);
     
 }
 
