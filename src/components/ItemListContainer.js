@@ -14,14 +14,14 @@ const promesa = new Promise((res, rej) => {
 
 const ItemListContainer = () => {
     
-    const [producto, setProducto] = useState ([]);
+    const [productos, setProductos] = useState ([]);
     const [loading, setLoading] = useState (false);
 
     useEffect(() =>{
         setLoading(true);
-        promesa.then ((Res) => {
+        promesa.then ((res) => {
             setLoading(false);
-            setProducto(Res);
+            setProductos(res);
         });
     },[]);
 
@@ -34,8 +34,7 @@ const ItemListContainer = () => {
 
     }
         return (
-            <div>
-                
+            <div className="container">
                 
                 <ItemList productos ={productos} />
                 <ItemCount stock = {5}/>

@@ -3,14 +3,15 @@ import data from "../data/data"
 import "../components/item.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const item = ({productos}) => {
+const Item = ({producto}) => {
     return (
         <div>
-            <h2>{productos.nombre}</h2>
-            <p>{productos.precio}</p>
+            <h2>{producto.nombre}</h2>
+            <img src={producto.imagen} alt="remera" width="300px" />
+            <p class="precio">{producto.precio}</p>
         </div>
     )
 }
 
 
-export default item
+export default Item
