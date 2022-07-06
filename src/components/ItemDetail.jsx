@@ -1,14 +1,18 @@
 import React from "react";
-import Detalle from "./Detalle";
+import ItemDetailContainer from "../components/ItemDetailContainer"
 
 
 
-const ItemDetail = ({detalle}) => {
+
+const ItemDetail = ({objetoDetalle}) => {
     return (
             <>  
-                {detalle.map((detalle) => {
-                return  <Detalle key={detalle.id} detalle={detalle}/>
-                })}
+            <div>
+                <h2>{objetoDetalle.nombre}</h2>
+                <img src={objetoDetalle.imagen} alt="remera" width="200px" />
+                <p>{objetoDetalle.descripcion}</p>
+                <p class="precio">{objetoDetalle.precio}</p>
+            </div>
             </>
         )
     }

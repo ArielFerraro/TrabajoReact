@@ -3,7 +3,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemCount from "./ItemCount";
 import productos from "../data/data"
 import ItemList from "./ItemList";
-
+import ItemDetail from "./ItemDetail";
+import ItemDetailContainer from "./ItemDetailContainer";
+ 
 
 const promesa = new Promise((res, rej) => {
     setTimeout(() => {
@@ -35,8 +37,10 @@ const ItemListContainer = () => {
     }
         return (
             <div className="container">
+                <>
                 <ItemList productos ={productos} />
                 <ItemCount stock = {5}/>
+                </>
             </div>
         )
 }

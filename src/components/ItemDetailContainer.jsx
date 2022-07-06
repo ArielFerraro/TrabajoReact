@@ -1,13 +1,23 @@
 import React from "react";
 import {useState, useEffect} from "react";
 import ItemDetail from "./ItemDetail";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from 'react-bootstrap/Button';
 
+
+const objetoDetalle =  {
+    nombre: "Remera Rey Leon",
+    imagen: "http://d3ugyf2ht6aenh.cloudfront.net/stores/440/495/products/remeras-leon-con-corona1-f3fef1574aa2aef7c915987989224604-640-0.png",
+    id: 1,
+    descripcion: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis commodi ea consequuntur necessitatibus itaque totam perspiciatis debitis nulla illo incidunt, magni asperiores enim eligendi quaerat magnam cupiditate rerum ex atque.",
+    precio: "$2000",
+};
 
 
 
 const promesa = new Promise((res, rej) => {
-    setTimeout((detalle) => {
-    res(detalle);
+    setTimeout(() => {
+    res(objetoDetalle);
     }, 2000);
 });
 
@@ -15,14 +25,14 @@ const promesa = new Promise((res, rej) => {
 
 const ItemDetailContainer = () => {
     
-    const [detalle, setDetalle] = useState ([]);
+    const [objetoDetalle, setobjetoDetalle] = useState ([]);
     const [loading, setLoading] = useState (false);
 
     useEffect(() =>{
         setLoading(true);
         promesa.then ((res) => {
             setLoading(false);
-            setDetalle(res);
+            setobjetoDetalle(res);
         });
     },[]);
 
@@ -35,11 +45,10 @@ const ItemDetailContainer = () => {
 
     }
         return (
-            <div className="container">
-                
-                <ItemDetail detalle={detalle} />
-                
-            </div>
+            <>
+        <ItemDetail detalle={objetoDetalle}/>
+        <Button onClick={objetoDetalle}>ver detalle</Button>
+        </>
         )
 }
 
