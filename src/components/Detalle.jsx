@@ -3,7 +3,7 @@ import detalle from "../data/DataDetalle"
 
 
 
-const Detalle = ({detalle}) => {
+const Detalles = ({detalle}) => {
     return (
         <div>
             <h2>{detalle.nombre}</h2>
@@ -15,4 +15,4 @@ const Detalle = ({detalle}) => {
 }
 
 
-export default Detalle
+export default Detalles
