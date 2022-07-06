@@ -2,6 +2,8 @@ import React, {useState} from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import './ItemCount.css'
+import detalle from "./Detalle";
+
 
 const ItemCount = ({stock}) =>{
     const [cuenta, setCuenta] = useState (1)
@@ -24,7 +26,7 @@ const ItemCount = ({stock}) =>{
     <p>{cuenta}</p>
     <Button  variant="dark" onClick = {restar}>-</Button>
     <Button  variant="dark" onClick = {sumar}>+</Button>
-    <Button variant="dark"> Ver Detalle Del Producto</Button>
+    <Button  variant="dark" onClick = {detalle}>ver detalle</Button>
     </>
     )
     
