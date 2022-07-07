@@ -47,7 +47,7 @@ const ItemDetailContainer = () => {
         return (
             <>
         <ItemDetail detalle={objetoDetalle}/>
-        <Button onClick={objetoDetalle}>ver detalle</Button>
+        
         </>
         )
 }

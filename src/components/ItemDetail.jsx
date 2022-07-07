@@ -3,16 +3,19 @@ import ItemDetailContainer from "../components/ItemDetailContainer"
 
 
 
-
-const ItemDetail = ({objetoDetalle}) => {
+const ItemDetail = ({detalle}) => {
+    
     return (
             <>  
-            <div>
-                <h2>{objetoDetalle.nombre}</h2>
-                <img src={objetoDetalle.imagen} alt="remera" width="200px" />
-                <p>{objetoDetalle.descripcion}</p>
-                <p class="precio">{objetoDetalle.precio}</p>
-            </div>
+            
+                <div>
+                    <button onClick={detalle}>ver detalle</button>
+                    <h2>{detalle.nombre}</h2>
+                    <img src={detalle.imagen} alt="remera" width="200px" />
+                    <p>{detalle.descripcion}</p>
+                    <p className="precio">{detalle.precio}</p>
+
+                </div>
             </>
         )
     }
