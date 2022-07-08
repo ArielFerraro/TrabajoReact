@@ -6,7 +6,6 @@ const detalle = [
         descripcion: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis commodi ea consequuntur necessitatibus itaque totam perspiciatis debitis nulla illo incidunt, magni asperiores enim eligendi quaerat magnam cupiditate rerum ex atque.",
         precio: "$2000",
     }
-
-
-
 ]
+
+export default detalle

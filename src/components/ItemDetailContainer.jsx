@@ -1,5 +1,5 @@
 import React from "react";
-import {useState, useEffect} from "react";
+import {useState} from "react";
 import ItemDetail from "./ItemDetail";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
@@ -25,16 +25,19 @@ const promesa = new Promise((res, rej) => {
 
 const ItemDetailContainer = () => {
     
-    const [objetoDetalle, setobjetoDetalle] = useState ([]);
+    const [mostrarDetalle, setMostrarDetalle] = useState (null);
     const [loading, setLoading] = useState (false);
 
-    useEffect(() =>{
+
+    const mostrar = mostrarDetalle && <ItemDetail detalle={mostrarDetalle}/>;
+
+    const funcionMostrar =() =>{
         setLoading(true);
         promesa.then ((res) => {
             setLoading(false);
-            setobjetoDetalle(res);
+            setMostrarDetalle(res);
         });
-    },[]);
+    };
 
     if (loading) {
         return (
@@ -44,10 +47,10 @@ const ItemDetailContainer = () => {
         );
 
     }
-        return (
-            <>
-        <ItemDetail detalle={objetoDetalle}/>
-        
+        return ( 
+        <>
+        <button onClick={funcionMostrar}>ver detalle</button>
+        {mostrar}
         </>
         )
 }

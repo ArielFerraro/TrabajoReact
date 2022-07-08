@@ -5,7 +5,7 @@ import productos from "../data/data"
 import ItemList from "./ItemList";
 import ItemDetail from "./ItemDetail";
 import ItemDetailContainer from "./ItemDetailContainer";
- 
+
 
 const promesa = new Promise((res, rej) => {
     setTimeout(() => {
