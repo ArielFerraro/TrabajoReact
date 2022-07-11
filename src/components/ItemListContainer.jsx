@@ -39,8 +39,8 @@ const ItemListContainer = () => {
             <div className="container">
                 <>
                 <ItemList productos ={productos} />
-                <ItemDetailContainer/>
-                <ItemCount stock = {5}/>
+                
+                
                 
                 </>
             </div>

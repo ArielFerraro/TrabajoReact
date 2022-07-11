@@ -1,6 +1,6 @@
 header {
     display: flex;
-    justify-content:center ;
+    justify-content:space-around ;
     align-items:center;
     border: solid rgb(221, 216, 216);
     background-color: rgb(255, 254, 254);
@@ -8,8 +8,10 @@ header {
 }
 
 h1 {
+    display: flex;
+    justify-content: center;
     margin-left: 15px;
-    padding-right: 100px;
+    padding-left: 70px;
     color:rgb(228, 187, 24);
     font-family:'Times New Roman', Times, serif;
     
@@ -19,5 +21,18 @@ h1 {
 body {
 background-color:rgb(228, 187, 24) ;
 }
+
+
+.estilonav {
+    display: inline;
+    padding-left: 60px;
+    padding-right: 40px;
+    text-decoration: none;
+    color: black;
+    
+    
+} 
+
+
 
 

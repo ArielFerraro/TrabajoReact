@@ -4,6 +4,7 @@ h2 {
     font-size: 50px;
     background-color: rgb(8, 4, 4);
     color: azure;
+
 }
 
 .precio {
@@ -12,5 +13,17 @@ h2 {
     background-color: black;
     border-radius: 20px;
     color:azure
+}
+
+
+.item {
+    display: flex;
+    background-color:darkgoldenrod;
+    justify-content:space-around;
+    align-items: flex-start;
+    margin: 20px;
+    border-radius: 50px;
+    
+
 }
 
