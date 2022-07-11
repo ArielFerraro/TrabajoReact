@@ -3,7 +3,6 @@ const productos =  [
         nombre: "Remera Rey Leon",
         imagen: "http://d3ugyf2ht6aenh.cloudfront.net/stores/440/495/products/remeras-leon-con-corona1-f3fef1574aa2aef7c915987989224604-640-0.png",
         id: 0,
-        descripcion: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis commodi ea consequuntur necessitatibus itaque totam perspiciatis debitis nulla illo incidunt, magni asperiores enim eligendi quaerat magnam cupiditate rerum ex atque.",
         precio: "$2000",
     },
         {
@@ -35,8 +34,8 @@ const productos =  [
         precio: "$3500",  
     },
         {
-        nombre: "Remera Rey Leon",
-        imagen: "https://w7.pngwing.com/pngs/3/819/png-transparent-printed-t-shirt-polo-shirt-clothing-t-shirt-tshirt-fashion-active-shirt-thumbnail.png",
+        nombre: "Remera C",
+        imagen: "https://assets.stickpng.com/thumbs/580b57fbd9996e24bc43bf79.png",
         id: 5,
         precio: "$1500",
     },
@@ -61,7 +60,7 @@ const productos =  [
     },
         {
         nombre: "Remera Rey Leon",
-        imagen: "https://icon2.cleanpng.com/20180409/dqe/kisspng-t-shirt-amazon-com-raglan-sleeve-clothing-camisa-5acaf00117a133.7572112415232491530968.jpg",
+        imagen: "https://tienda.guantexindustrial.com.ar/712-home_default/remera-algodon-jersey-blanco-talle-l.jpg",
         id: 9,
         precio: "$2000",
     },
