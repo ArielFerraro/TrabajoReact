@@ -7,24 +7,28 @@ import agregarCarrito from "./ItemCount";
 
 
 
-    const ItemDetail = ({detalle,agregarCarrito}) => {
+    const ItemDetail = ({detalle}) => {
     
-        const [finalizarCompra,setFinalizarCompra] = useState();
-    
-        const finalizar = (event) => {
-            console.log(event)
+        const [finalizarCompra, setFinalizarCompra] = useState(false)
+            
+        const onAdd = (cuenta) => {
+            setFinalizarCompra(true)
         }
-
-            return (
+        
+        return (
             <>  
                 <div>
                     <h2>{detalle.nombre}</h2>
                     <img src={detalle.imagen} alt="remera" width="200px" />
                     <p>{detalle.descripcion}</p>
                     <p className="precio">{detalle.precio}</p>
-                    <ItemCount stock={5} producto={detalle}/>
-                    <button onClick= {finalizar}>Finalizar Compra</button>
-                </div>
+                    
+                    {finalizarCompra
+                    ? <Link to="/cart">
+                    <button>Finalizar compra</button>
+                    </Link>
+                    : <ItemCount initial={1} stock={5} onAdd={onAdd} />}
+                    </div>
             </>
         )
     }

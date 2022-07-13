@@ -5,15 +5,16 @@ import { Link } from "react-router-dom";
 
 
 
-const ItemCount = ({stock, producto}) =>{
+const ItemCount = ({stock, producto, onAdd}) =>{
     const [cuenta, setCuenta] = useState (1)
     
-    
+const agregar = () => {
+    onAdd(cuenta); 
+}
 
     const agregarCarrito = (event) => {
         const productoConStock = producto;
         productoConStock.stock = cuenta;
-        console.log(productoConStock);
     }
 
 
@@ -35,7 +36,7 @@ const ItemCount = ({stock, producto}) =>{
     <p>{cuenta}</p>
     <button onClick = {restar}>-</button>
     <button onClick = {sumar}>+</button>
-    <Link to="Cart"><button onClick={agregarCarrito}>Agregar al carrito</button></Link>
+    <button onClick={() =>agregar()}>Agregar al carrito</button>
     
     
     </>
