@@ -1,12 +1,21 @@
 import React, {useState} from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Button from 'react-bootstrap/Button';
 import './ItemCount.css'
+import { Link } from "react-router-dom";
 
 
 
-const ItemCount = ({stock}) =>{
+
+const ItemCount = ({stock, producto}) =>{
     const [cuenta, setCuenta] = useState (1)
+    
+    
+
+    const agregarCarrito = (event) => {
+        const productoConStock = producto;
+        productoConStock.stock = cuenta;
+        console.log(productoConStock);
+    }
+
 
     const sumar = () => {
     if (cuenta < stock) {
@@ -24,8 +33,9 @@ const ItemCount = ({stock}) =>{
     return (
     <>
     <p>{cuenta}</p>
-    <Button  variant="dark" onClick = {restar}>-</Button>
-    <Button  variant="dark" onClick = {sumar}>+</Button>
+    <button onClick = {restar}>-</button>
+    <button onClick = {sumar}>+</button>
+    <button onClick={agregarCarrito}>Agregar al carrito</button>
     
     
     </>

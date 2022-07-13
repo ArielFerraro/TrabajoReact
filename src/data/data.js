@@ -59,7 +59,7 @@ const productos =  [
         precio: "$2500",  
     },
         {
-        nombre: "Remera Rey Leon",
+        nombre: "Remera Blanca",
         imagen: "https://tienda.guantexindustrial.com.ar/712-home_default/remera-algodon-jersey-blanco-talle-l.jpg",
         id: 9,
         precio: "$2000",
