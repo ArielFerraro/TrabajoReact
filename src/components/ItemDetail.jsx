@@ -3,16 +3,23 @@ import ItemDetailContainer from "../components/ItemDetailContainer"
 import { Link } from "react-router-dom";
 import ItemCount from "./ItemCount";
 import { useState } from "react";
-import agregarCarrito from "./ItemCount";
+import { cartContext } from "./CartContext";
+import { useContext } from "react";
 
 
 
-    const ItemDetail = ({detalle}) => {
+
+    const ItemDetail = ({detalle, producto}) => {
     
         const [finalizarCompra, setFinalizarCompra] = useState(false)
-            
+        const {agregarProducto} = useContext(cartContext);    
+
+
         const onAdd = (cuenta) => {
+        
+            agregarProducto ({...producto, qty: cuenta});
             setFinalizarCompra(true)
+            
         }
         
         return (
@@ -27,8 +34,8 @@ import agregarCarrito from "./ItemCount";
                     ? <Link to="/cart">
                     <button>Finalizar compra</button>
                     </Link>
-                    : <ItemCount initial={1} stock={5} onAdd={onAdd} />}
-                    </div>
+                    : <ItemCount stock={10} onAdd={onAdd} />}
+                </div>
             </>
         )
     }
