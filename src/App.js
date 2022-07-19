@@ -10,6 +10,7 @@ import {
 } from 'react-router-dom';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import CartCustomProvider from './components/CartContext';
+import Cart from './components/Cart';
 
 
 
@@ -23,6 +24,7 @@ const App = () => {
         <Route path='/' element={<ItemListContainter/>}/>
         <Route path='/categories/:categoriesName' element={<ItemListContainter/>}/>
         <Route path='/item/:itemid' element = {<ItemDetailContainer/>}/>
+        <Route path='/cart' element = {<Cart/>}/>
       </Routes> 
       </CartCustomProvider>
     </BrowserRouter>

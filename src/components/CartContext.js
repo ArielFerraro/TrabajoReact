@@ -5,12 +5,12 @@ const { Provider } = cartContext;
 
 const CartCustomProvider = ({children}) => {
 
-    const [ producto,setProducto ] = useState([])
+    const [ productos,setProductos ] = useState([])
     const [ qtyProducto, setQtyProducto] = useState(0);
 
     const getQtyProducto= () => {
         let qty = 0;
-        producto.forEach(producto => {
+        productos.forEach(producto => {
             qty += producto.qty;
         } )
         setQtyProducto(qty)
@@ -18,37 +18,38 @@ const CartCustomProvider = ({children}) => {
 
     useEffect(() =>{
         getQtyProducto(); 
-    }, [producto])
+    }, [productos])
     
     
     const  eliminarProducto = (id) => {
-        setProducto(producto.filter(producto => producto.id !== id));
+        setProductos(productos.filter(producto => producto.id !== id));
         
     };
 
     const agregarProducto = (producto) => {
         if (enCarrito(producto.id)) {
-            const found = producto.find(p => p.id === producto.id);
-            const index = producto.indexOf(found);
-            const aux = [...producto];
-            aux[index].qty += producto.qty;
-            setProducto(aux);
-        }   
+        const aux = [...productos];
+        const found = aux.find(p => p.id === producto.id);
+        found.qty += producto.qty;
+        setProductos(aux);
+        } else {
+            setProductos([...productos, producto])
+        }  
         };
         
     
 
     const enCarrito = (id)  => {
-        return producto.some(producto => producto.id === id);
+        return productos.some(producto => producto.id === id);
     };
 
     const limpiar = (id) => {
-        setProducto([]);
+        setProductos([]);
         setQtyProducto(0);
     };
 
     return (
-        <Provider value={{ producto, agregarProducto, eliminarProducto, limpiar, qtyProducto }}>
+        <Provider value={{ productos, agregarProducto, eliminarProducto, limpiar, qtyProducto }}>
             {children}
         </Provider>
     )

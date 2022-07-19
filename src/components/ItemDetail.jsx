@@ -9,7 +9,7 @@ import { useContext } from "react";
 
 
 
-    const ItemDetail = ({detalle, producto}) => {
+    const ItemDetail = ({detalle, productos}) => {
     
         const [finalizarCompra, setFinalizarCompra] = useState(false)
         const {agregarProducto} = useContext(cartContext);    
@@ -17,7 +17,7 @@ import { useContext } from "react";
 
         const onAdd = (cuenta) => {
         
-            agregarProducto ({...producto, qty: cuenta});
+            agregarProducto ({...productos, qty: cuenta});
             setFinalizarCompra(true)
             
         }
