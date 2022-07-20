@@ -43,7 +43,7 @@ const CartCustomProvider = ({children}) => {
         return productos.some(producto => producto.id === id);
     };
 
-    const limpiar = (id) => {
+    const limpiar = () => {
         setProductos([]);
         setQtyProducto(0);
     };

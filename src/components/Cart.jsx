@@ -8,7 +8,6 @@ const Cart = ({eliminarProducto}) => {
     const {productos} = useContext(cartContext);
 
     
-    
     return (
         <>
         {productos.length === 0
