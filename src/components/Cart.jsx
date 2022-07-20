@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { cartContext } from "./CartContext";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 
-const Cart = (producto) => {
+const Cart = ({eliminarProducto}) => {
     
     const {productos} = useContext(cartContext);
-    console.log(productos)
+
+    
     
     return (
         <>
@@ -18,6 +19,9 @@ const Cart = (producto) => {
                     <h2>{producto.nombre}</h2>
                     <img src={producto.imagen} alt="remera" width="200px" />
                     <p className="precio">{producto.precio}</p>
+                    <p className="precio">{producto.qty}</p>
+                    <button onClick={eliminarProducto}>eliminar item</button>
+                    
                 </div>)} 
             </>
         }

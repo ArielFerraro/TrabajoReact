@@ -49,7 +49,7 @@ const CartCustomProvider = ({children}) => {
     };
 
     return (
-        <Provider value={{ productos, agregarProducto, eliminarProducto, limpiar, qtyProducto }}>
+        <Provider value={{ productos, agregarProducto, eliminarProducto, limpiar, qtyProducto}}>
             {children}
         </Provider>
     )
