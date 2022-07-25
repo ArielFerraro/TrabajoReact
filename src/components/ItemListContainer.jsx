@@ -32,7 +32,7 @@ const ItemListContainer = () => {
             setProductos(lista);
             
         })
-        });
+        },[]);
     
 
     if (loading) {
