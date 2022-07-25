@@ -3,9 +3,9 @@ import { cartContext } from "./CartContext";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 
-const Cart = ({eliminarProducto}) => {
+const Cart = () => {
     
-    const {productos} = useContext(cartContext);
+    const {productos,eliminarProducto} = useContext(cartContext);
 
     
     return (

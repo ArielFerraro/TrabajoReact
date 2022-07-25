@@ -3,13 +3,11 @@ import {useState, useEffect} from "react";
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
 import detalle from "../data/DataDetail";
+import { db } from "../firebase/firebase";
+import { getDoc, collection, doc } from "firebase/firestore"
 
 
-const promesa = new Promise((res, rej) => {
-    setTimeout(() => {
-    res(detalle);
-    }, 2000);
-});
+
 
 
 
@@ -18,16 +16,20 @@ const ItemDetailContainer = () => {
     const [mostrarDetalle, setMostrarDetalle] = useState (null);
     const [loading, setLoading] = useState (false);
     
-    const { itemid } = useParams()
+    const { productoId } = useParams()
 
     useEffect(() =>{
-        setLoading(true);
-        promesa.then ((res) => {
-            setLoading(false);
-            const detalle = res.find(item => item.id == itemid)
-            setMostrarDetalle(detalle); 
-        });
-    },[itemid]);
+        const productoCollection = collection(db,`Productos`);
+        const refDoc = doc(productoCollection, productoId);
+        getDoc(refDoc)
+        .then(resultado => {
+            const producto = {
+                id: resultado.id,
+                ...resultado.data(),
+            }
+            setMostrarDetalle(producto);
+        })
+    },[productoId]);
 
     if (loading) {
         return (
