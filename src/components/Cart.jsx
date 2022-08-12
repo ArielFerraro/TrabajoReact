@@ -40,16 +40,16 @@ const Cart = () => {
             ? <h3>No hay productos en el carrito <Link to="/">ir a catalogo</Link></h3> 
             : 
             <> {productos.map((producto) => 
-                <div key ={`${producto.id}`} className="detalle">
+                <div key ={`${producto.id}`} className="ItemCarrito">
                     <h2>{producto.nombre}</h2>
                     <img src={producto.imagen} alt="remera" width="200px" />
-                    <p className="precio">{producto.precio}</p>
-                    <p className="precio">{producto.qty}</p>
-                    <button onClick={() => {eliminarProducto(producto.id)}}>eliminar item</button>
+                    <p className="precio">${producto.precio}</p>
+                    <p>{producto.qty}</p>
+                    <button  onClick={() => {eliminarProducto(producto.id)}}>eliminar item</button>
                     
                 </div>)}
                 <PrecioFinal/>
-            <button onClick={finalizarCompra}>finalizarCompra</button>
+            <button className="final" onClick={finalizarCompra}>finalizarCompra</button>
                 
                 
             </>

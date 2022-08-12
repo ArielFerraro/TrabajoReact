@@ -64,3 +64,16 @@ h2 {
 body {
     background-color:rgb(228, 224, 224) ;
     }
+
+.ItemCarrito {
+    display: flex;
+    max-height: 18.75rem;
+    align-items: center;
+    margin-left: .9375rem;
+    margin-top: .9375rem;
+    width: 37.5rem;
+    border: .0625rem solid rgb(112, 111, 111);
+    background-color:rgb(228, 187, 24);
+    }
+
+
