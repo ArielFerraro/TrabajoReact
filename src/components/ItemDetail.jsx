@@ -5,6 +5,7 @@ import ItemCount from "./ItemCount";
 import { useState } from "react";
 import { cartContext } from "./CartContext";
 import { useContext } from "react";
+import "./item.css"
 
 
 
@@ -24,11 +25,11 @@ import { useContext } from "react";
         
         return (
             <>  
-                <div>
+                <div className="detalle">
                     <h2>{detalle.nombre}</h2>
-                    <img src={detalle.imagen} alt="remera" width="200px" />
+                    <img className="imagen imagenDetalle"src={detalle.imagen}  alt="remera" width="200px" />
                     <p>{detalle.descripcion}</p>
-                    <p className="precio">{detalle.precio}</p>
+                    <p className="precio">${detalle.precio}</p>
                     
                     {finalizarCompra
                     ? <Link to="/cart">

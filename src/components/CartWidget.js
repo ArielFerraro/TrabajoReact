@@ -10,7 +10,7 @@ const CartWidget = () => {
     return (
     <>
         <img src={logo} alt="carrito" />
-        <p>{qtyProducto}</p>
+        <span>{qtyProducto}</span>
     </>
     )
 }

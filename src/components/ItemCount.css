@@ -1,10 +1,19 @@
 p {
-    font-size: 30px;
-    margin: 20px;
+    font-size: 1.875rem;
+    margin: 1.25rem;
 }
 
 
 button {
-    margin-left: 20px;
+    margin-left: 1%;
+}
+
+h4 {
+    display: flex;
+    margin-right: 5%;
+    justify-content:flex-end ;
+    text-decoration: none;
+    color: black;
+    font-size: 1.5625rem;
 }
 
