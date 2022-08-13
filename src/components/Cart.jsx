@@ -11,22 +11,29 @@ const Cart = () => {
     const {productos,eliminarProducto} = useContext(cartContext);
     const [idVenta, setIdVenta] = useState("");
 
-    const PrecioFinal = () => {
+    const precioFinal = () => {
         let total = 0;
         productos.forEach((producto) => {
             total+=producto.precio*producto.qty;
         })
-        return (<>
-        <span className="total">Precio Final: ${total}</span> 
-        </>
-        )
+        return total;
+        
+    }
+
+    const  ElementoPrecioFinal = (props) => {
+    
+    return (<>
+            <span className="precioFinal">Precio Final: ${props.total}</span> 
+            </>
+            )
     }
     const finalizarCompra = () => {
         const ventasCollection = collection(db, 'ventas');
+        
         addDoc(ventasCollection,{
             items: productos,
             date:  serverTimestamp(),
-            total: PrecioFinal,
+            total: precioFinal(),
         })
         .then((result) =>{
             setIdVenta(result.id);
@@ -48,9 +55,8 @@ const Cart = () => {
                     <button  onClick={() => {eliminarProducto(producto.id)}}>eliminar item</button>
                     
                 </div>)}
-                <PrecioFinal/>
-            <button className="final" onClick={finalizarCompra}>finalizarCompra</button>
-                
+                <ElementoPrecioFinal total={precioFinal()}/>
+                <Link to='/formularioDePago'><button onClick={finalizarCompra}>Pagar</button></Link>
                 
             </>
         }

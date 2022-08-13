@@ -11,6 +11,9 @@ import {
 import ItemDetailContainer from './components/ItemDetailContainer';
 import CartCustomProvider from './components/CartContext';
 import Cart from './components/Cart';
+import Nosotros from './components/Nosotros'
+import Contacto from './components/Contacto';
+import FormularioDePago from './components/FormularioDePago';
 
 
 
@@ -25,8 +28,11 @@ const App = () => {
         <Route path='/categories/:categoriesName' element={<ItemListContainter/>}/>
         <Route path='/item/:productoId' element = {<ItemDetailContainer/>}/>
         <Route path='/cart' element = {<Cart/>}/>
+        <Route path= '/categories/Nosotros' element = {<Nosotros/>}/>
+        <Route path= '/categories/Contacto' element = {<Contacto/>}/>
+        <Route path= '/formularioDePago'  element = {<FormularioDePago/>}/>
       </Routes> 
-      </CartCustomProvider>
+    </CartCustomProvider>
     </BrowserRouter>
   );
 
