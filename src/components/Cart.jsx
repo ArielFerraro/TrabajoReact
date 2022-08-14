@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { db } from "../firebase/firebase";
 import { doc,addDoc, collection, serverTimestamp } from "firebase/firestore";
 import "./item.css"
+import FormularioDePago from "./FormularioDePago";
 
 const Cart = () => {
     
@@ -31,14 +32,26 @@ const Cart = () => {
         const ventasCollection = collection(db, 'ventas');
         
         addDoc(ventasCollection,{
+            nombre: document.getElementById("nombre").value,
+            apellido: document.getElementById("apellido").value,
+            tarjeta: document.getElementById("tarjeta").value,
+            cuotas: document.getElementById("cuotas").value,
+            vencimiento: document.getElementById("vencimiento").value,
+            codigo: document.getElementById("codigo").value,
+            telefono: document.getElementById("telefono").value,
+            email: document.getElementById("email").value,
             items: productos,
             date:  serverTimestamp(),
             total: precioFinal(),
+            
+            
+            
         })
         .then((result) =>{
             setIdVenta(result.id);
+            
         })
-
+        console.log(idVenta)
     }
     
     return (
@@ -56,7 +69,11 @@ const Cart = () => {
                     
                 </div>)}
                 <ElementoPrecioFinal total={precioFinal()}/>
-                <Link to='/formularioDePago'><button onClick={finalizarCompra}>Pagar</button></Link>
+                <FormularioDePago/>
+                <button onClick={finalizarCompra}>Terminar Compra</button>
+                <div>
+                    <p>NUMERO DE ORDEN:    {idVenta} </p>
+                </div>
                 
             </>
         }

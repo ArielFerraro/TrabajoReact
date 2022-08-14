@@ -11,14 +11,7 @@ const firebaseConfig = {
     appId: "1:1084446842475:web:4ccfaab19f6ee8504adb2e"
 };
 
-/* const firebaseConfig = {
-    apiKey: "AIzaSyDkqkMjvcQtQuA961NZgFSEYvs7-xdcsiQ",
-    authDomain: "proyectoreact-cb0ba.firebaseapp.com",
-    projectId: "proyectoreact-cb0ba",
-    storageBucket: "proyectoreact-cb0ba.appspot.com",
-    messagingSenderId: "481698125061",
-    appId: "1:481698125061:web:abeef268cb47677f2dd36c"
-}; */
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
