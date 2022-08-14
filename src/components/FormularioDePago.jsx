@@ -1,13 +1,11 @@
 import React, {useForm} from "react-hook-form";
-import { cartContext } from "./CartContext";
-import { useContext } from "react";
 import "./item.css"
 
 
 
 const FormularioDePago = () => {
 
-    const {} = useContext(cartContext);
+    
     const {register, handleSubmit } = useForm();
 
     const onSubmit = (data) => {

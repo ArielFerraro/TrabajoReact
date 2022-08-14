@@ -51,30 +51,34 @@ const Cart = () => {
             setIdVenta(result.id);
             
         })
-        console.log(idVenta)
+        
     }
     
     return (
         <>
+        <h1>CARRITO DE COMPRAS</h1>
         {productos.length === 0
             ? <h3>No hay productos en el carrito <Link to="/">ir a catalogo</Link></h3> 
             : 
-            <> {productos.map((producto) => 
+            <> 
+                {productos.map((producto) => 
                 <div key ={`${producto.id}`} className="ItemCarrito">
                     <h2>{producto.nombre}</h2>
                     <img src={producto.imagen} alt="remera" width="200px" />
                     <p className="precio">${producto.precio}</p>
                     <p>{producto.qty}</p>
-                    <button  onClick={() => {eliminarProducto(producto.id)}}>eliminar item</button>
+                    <button onClick={() => {eliminarProducto(producto.id)}}>eliminar item</button>
                     
                 </div>)}
+                
+                <div >
                 <ElementoPrecioFinal total={precioFinal()}/>
-                <FormularioDePago/>
-                <button onClick={finalizarCompra}>Terminar Compra</button>
-                <div>
+                <div className="formulario">
                     <p>NUMERO DE ORDEN:    {idVenta} </p>
                 </div>
-                
+                </div>
+                <FormularioDePago/>
+                <button onClick={finalizarCompra}>Terminar Compra</button>
             </>
         }
         </>

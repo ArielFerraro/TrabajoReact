@@ -1,10 +1,5 @@
 import  React, { useState, useEffect } from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import ItemCount from "./ItemCount";
-import productos from "../data/data"
 import ItemList from "./ItemList";
-import ItemDetail from "./ItemDetail";
-import ItemDetailContainer from "./ItemDetailContainer";
 import { db } from "../firebase/firebase";
 import { getDocs, collection, query, where} from "firebase/firestore"
 import "./ilc.css"

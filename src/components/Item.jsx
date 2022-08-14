@@ -1,7 +1,5 @@
 import React from "react";
-import data from "../data/data"
 import "../components/item.css"
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from "react-router-dom";
 
 const Item = ({producto}) => {

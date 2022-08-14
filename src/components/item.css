@@ -70,7 +70,7 @@ body {
     align-items: center;
     margin-left: .9375rem;
     margin-top: .9375rem;
-    width: 37.5rem;
+    width: 31.25rem;
     border: .0625rem solid rgb(112, 111, 111);
     background-color:rgb(228, 187, 24);
     }
@@ -85,7 +85,7 @@ body {
 .formulario {
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    flex-direction:column;
     align-items: center;
     background-color: rgb(228, 187, 24);
     max-width: 38.4375rem;
@@ -104,4 +104,12 @@ body {
 .precioFinal {
     font-size: 2.5rem;
 }
+
+
+
+
+.formulario2 {
+    display: flex;
+}
+
 
