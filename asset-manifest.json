@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/repository-name/static/css/main.2d126942.css",
-    "main.js": "/repository-name/static/js/main.0ef7aafd.js",
-    "index.html": "/repository-name/index.html",
-    "static/media/carrito.svg": "/repository-name/static/media/carrito.7c2e0c9638b1b75478eda62ffc3a994a.svg",
-    "main.2d126942.css.map": "/repository-name/static/css/main.2d126942.css.map",
-    "main.0ef7aafd.js.map": "/repository-name/static/js/main.0ef7aafd.js.map"
+    "main.css": "/TrabajoReact/static/css/main.2d126942.css",
+    "main.js": "/TrabajoReact/static/js/main.aee09dbf.js",
+    "index.html": "/TrabajoReact/index.html",
+    "static/media/carrito.svg": "/TrabajoReact/static/media/carrito.7c2e0c9638b1b75478eda62ffc3a994a.svg",
+    "main.2d126942.css.map": "/TrabajoReact/static/css/main.2d126942.css.map",
+    "main.aee09dbf.js.map": "/TrabajoReact/static/js/main.aee09dbf.js.map"
   },
   "entrypoints": [
     "static/css/main.2d126942.css",
-    "static/js/main.0ef7aafd.js"
+    "static/js/main.aee09dbf.js"
   ]
 }
