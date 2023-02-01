@@ -11,7 +11,7 @@ const Cart = () => {
     
     const {productos,eliminarProducto} = useContext(cartContext);
     const [idVenta, setIdVenta] = useState("");
-    //hola esto es una prueba 
+    
     const precioFinal = () => {
         let total = 0;
         productos.forEach((producto) => {
