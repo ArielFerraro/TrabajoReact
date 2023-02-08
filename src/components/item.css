@@ -9,7 +9,7 @@ h2 {
 
 .precio {
     display: flex;
-    background-color: rgb(94, 94, 94);
+    background-color: rgb(134, 133, 133);
     border-radius: 5px;
     justify-content: center;
     align-items: center;
@@ -28,7 +28,7 @@ h2 {
     align-content: center;
     margin: 5%;
     width: 288px;
-    box-shadow: 2px 2px 2px ;
+    box-shadow: 2px 2px 2px rgb(194, 191, 191) ;
     border-radius: 3px;
 } 
 
