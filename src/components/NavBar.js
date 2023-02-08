@@ -21,15 +21,13 @@ const NavBar = () => {
 
     return (
         <header>
-            <nav className='navContainer'>
                 <div>
                 <Link to="/" className='estilonav' > <h1>REMERAS Y ESTAMPA2</h1></Link>
                 </div>
                 <div className='navegationItems'>
                 {categories.map((categories) => <Link  key={categories.id} to={categories.route} className='estilonav'>{categories.name}</Link>)}
-                <Link  to="Cart" className='shoppingCart'><CartWidget/></Link>
                 </div>
-            </nav>
+             <Link  to="Cart" className='shoppingCart'><CartWidget/></Link>
         </header> 
 
     )
