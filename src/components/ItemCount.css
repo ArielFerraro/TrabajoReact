@@ -6,6 +6,12 @@ p {
 
 button {
     margin-left: 1%;
+    font-size: 12px;
+    border: 1px solid gray ;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px gray;
+    margin-bottom: 10px;
+    background-color: rgb(175, 172, 173);
 }
 
 h4 {

@@ -19,7 +19,7 @@ const Nosotros = () => {
             No queremos ser una marca más, queremos generar una excelente experiencia de compra para que vuelvas a elegirnos. El enfoque es buscar la satisfacción total de nuestros clientes por lo que desarrollamos un novedoso sistema de cambios y/o devoluciones.
             </p>
 
-            <img className=" fotocentro" src="https://storage.googleapis.com/stateless-main-bizlatinhub/2016/10/building-1712699_960_720.jpg" alt="Nuestra Empresa" />
+            <img className=" fotocentro imagen" src="https://storage.googleapis.com/stateless-main-bizlatinhub/2016/10/building-1712699_960_720.jpg" alt="Nuestra Empresa" />
         </div>
         </>
 )

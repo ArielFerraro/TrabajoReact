@@ -1,20 +1,14 @@
-h2 {
-    display: flex;
-    width: 9.375rem;
-    font-size: 1.25rem;
-    color: black;
-    margin: 5%;
 
-}
 
 .precio {
     display: flex;
-    background-color: rgb(134, 133, 133);
-    border-radius: 5px;
-    justify-content: center;
-    align-items: center;
-    color:azure;
-    width: 5.625rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color:rgb(109, 109, 109);
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 25px;
+    
     
 
 }
@@ -22,17 +16,21 @@ h2 {
 
 .item {
     display: flex;
-    background-color:rgb(235, 234, 234);
+    border: 1px solid rgb(235, 234, 234);
     justify-content:space-around;
     align-items: flex-start;
     align-content: center;
     margin: 5%;
-    width: 288px;
+    width: 300px;
+    max-height: 400px;
     box-shadow: 2px 2px 2px rgb(194, 191, 191) ;
     border-radius: 3px;
 } 
 
 .detalle {
+
+    padding: 10px;
+    margin-top: 20px;
     margin-left: 30rem;
     width: 500px;
     border-radius: 3px;
@@ -49,8 +47,12 @@ h2 {
 
 
 .imagen {
-    box-shadow: 2px 2px 2px;
-    max-height: 12.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: 2px 2px 2px; */
+    max-height: 200px;
+    margin: 10px auto;
 }
 
 
@@ -78,6 +80,7 @@ h2 {
     display: flex;
     justify-content: flex-end;
     max-height: 18.75rem;
+    margin-left: 20px;
     
 }
 
@@ -111,4 +114,23 @@ h2 {
     display: flex;
 }
 
+
+.boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    border: 1px solid gray ;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px gray;
+    margin-bottom: 10px;
+    background-color: rgb(175, 172, 173);
+}
+
+
+
+
+.nosotros{
+    background-color: rgb(220, 224, 224);
+}
 
