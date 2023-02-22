@@ -16,7 +16,7 @@ return (
     <div>
         
         
-        <form className="formulario" onSubmit={handleSubmit(onSubmit)} >
+        <form className="formulariodepago" onSubmit={handleSubmit(onSubmit)} >
             <br />
             <div>
             <label className="pago">Nombre:</label>

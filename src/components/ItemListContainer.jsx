@@ -1,7 +1,7 @@
 import  React, { useState, useEffect } from "react";
 import ItemList from "./ItemList";
 import { db } from "../firebase/firebase";
-import { getDocs, collection, query, where} from "firebase/firestore"
+import { getDocs, collection, } from "firebase/firestore"
 import "./ilc.css"
 
 
@@ -40,10 +40,8 @@ const ItemListContainer = () => {
 
     }
         return (
-            <div className="contenedores">
-                <>
+            <div className="espacioitems">
                 <ItemList productos ={productos} />
-                </>
             </div>
         )
 }

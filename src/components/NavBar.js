@@ -1,14 +1,12 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
 import { useWindowSize } from '../utils/hooks/useWindowSize';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './NavBar.css'
 import CartWidget from './CartWidget';
-import ItemListContainer from './ItemListContainer';
 import { Link} from 'react-router-dom';
 import { Nav, Navbar, } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Nosotros from './Nosotros';
+
 
 
 
@@ -40,7 +38,7 @@ const NavBar = () => {
     )
 
     const mobileMenu = (
-        <Navbar collapseOnSelect expand="lg" >
+        <Navbar className='mobilemenu' collapseOnSelect expand="lg"  >
       <Navbar.Brand href="#home">
     
       </Navbar.Brand>
@@ -56,7 +54,7 @@ const NavBar = () => {
     )
 
     const navMenu = isMobile ? mobileMenu : desktopMenu;
-    // si la resolucion es mas que 960 el navbar va a ser el nav desktop, si es menos es el desplegable (burger menu)
+    
 
     return (
         <header>

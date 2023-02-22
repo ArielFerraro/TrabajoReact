@@ -15,24 +15,21 @@ const Contacto = () => {
 
     return (
         <div>
-            <h1>Contacto</h1>
-            <p>No te quedes con dudas, contactanos por cualquier consulta que tengas:</p>
-            <form className="formulario" onSubmit={handleSubmit(onSubmit)} >
-                <div>
-                <br />
-                <label>Nombre:</label>
-                <input type="text" {...register('nombre')}/>
+            
+            <form className="formulario" onSubmit={handleSubmit(onSubmit)} >   
+                <div className="casillas">
+                        <h1>Contacto</h1>
+                        <p>No te quedes con dudas,<strong> contactanos por cualquier consulta que tengas:</strong></p>
+                        <label>Nombre:</label>
+                        <input type="text" {...register('nombre')}/>
+                        <br />
+                        <label>Apellido:</label>
+                        <input type="text" {...register('apellido')} />
+                        <br/>
+                        <textarea name="" id="" cols="30" rows="10" {...register('informacion')}></textarea>
+                        <br />
+                        <input type="submit" value="Enviar"/>
                 </div>
-                <br />
-                <div>
-                <label>Apellido:</label>
-                <input type="text" {...register('apellido')} />
-                </div>
-                <br/>
-                <div>
-                <textarea name="" id="" cols="30" rows="10" {...register('informacion')}></textarea>
-                </div>
-                <input type="submit" value="Enviar"/>
             </form>
             
         </div>

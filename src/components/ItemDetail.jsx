@@ -25,9 +25,10 @@ import "./item.css"
         return (
             <>  
                 <div className="detalle">
-                    <h2>{detalle.nombre}</h2>
+                    <div>
+                    <p className="nombreproducto">{detalle.nombre}</p>
                     <img className="imagen imagenDetalle"src={detalle.imagen}  alt="remera" width="200px" />
-                    <p>{detalle.descripcion}</p>
+                    <p className="descripcion">{detalle.descripcion}</p>
                     <p className="precio">${detalle.precio}</p>
                     
                     {finalizarCompra
@@ -35,6 +36,7 @@ import "./item.css"
                     <button>Finalizar compra</button>
                     </Link>
                     : <ItemCount stock={10} onAdd={onAdd} />}
+                    </div>
                 </div>
             </>
         )

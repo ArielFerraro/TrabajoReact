@@ -3,7 +3,7 @@ import { cartContext } from "./CartContext";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { db } from "../firebase/firebase";
-import { doc,addDoc, collection, serverTimestamp } from "firebase/firestore";
+import {addDoc, collection, serverTimestamp } from "firebase/firestore";
 import "./item.css"
 import FormularioDePago from "./FormularioDePago";
 
@@ -55,12 +55,12 @@ const Cart = () => {
     }
     
     return (
-        <>
-        <h1>CARRITO DE COMPRAS</h1>
+        <div>
+        <p >CARRITO DE COMPRAS</p>
         {productos.length === 0
-            ? <h3>No hay productos en el carrito <Link to="/">ir a catalogo</Link></h3> 
+            ? <p className="nombreproducto">No hay productos en el carrito <Link to="/">IR AL CATALOGO</Link></p> 
             : 
-            <> 
+            <div> 
                 {productos.map((producto) => 
                 <div key ={`${producto.id}`} className="ItemCarrito">
                     <h2>{producto.nombre}</h2>
@@ -73,15 +73,18 @@ const Cart = () => {
                 
                 <div >
                 <ElementoPrecioFinal total={precioFinal()}/>
-                <div className="formulario">
+                <div className="">
                     <p>NUMERO DE ORDEN:    {idVenta} </p>
+                    <br />
+                    <FormularioDePago/>
+                    <button onClick={finalizarCompra}>Terminar Compra</button>
                 </div>
                 </div>
-                <FormularioDePago/>
-                <button onClick={finalizarCompra}>Terminar Compra</button>
-            </>
+                
+                
+            </div>
         }
-        </>
+        </div>
     )
 }
 

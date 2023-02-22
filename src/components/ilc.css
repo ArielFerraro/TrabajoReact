@@ -1,6 +1,8 @@
-.contenedores {
-    display: flex;
-    align-items: center;
+.espacioitems {
+   display: flex;
     justify-content: center;
-    flex-wrap: wrap
+    align-content: center;
+    flex-wrap:wrap;
+    max-width: 27rem;
+    
 }

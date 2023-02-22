@@ -11,7 +11,7 @@ const Nosotros = () => {
     return ( 
         <>
         <div className="nosotros ">
-            <h1>Nosotros</h1>
+            <h1 className="titulonosotros">Nosotros</h1>
             <p>
             Somos una empresa que nació en el año 2022, nuestra actividad esta totalmente desarrollada y enfocada en el diseño de un remeras y estampados, funcional y de alta calidad. Nos enfocados en el diseño, buscamos satisfacer todas nuestras inquietudes en ese sentido. Sabemos qué queremos y esperamos qué sea lo mismo que ustedes. 
             </p>
