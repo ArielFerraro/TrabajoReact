@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-duplicate-props */
 import React, { useState } from "react";
 import { cartContext } from "./CartContext";
 import { useContext } from "react";
@@ -6,11 +7,13 @@ import { db } from "../firebase/firebase";
 import {addDoc, collection, serverTimestamp } from "firebase/firestore";
 import "./item.css"
 import FormularioDePago from "./FormularioDePago";
+import CustomModal from "./Modal";
 
 const Cart = () => {
     
     const {productos,eliminarProducto} = useContext(cartContext);
     const [idVenta, setIdVenta] = useState("");
+    const [show, setShow] = useState(false);
     
     const precioFinal = () => {
         let total = 0;
@@ -20,6 +23,9 @@ const Cart = () => {
         return total;
         
     }
+
+
+   
 
     const  ElementoPrecioFinal = (props) => {
     
@@ -49,43 +55,48 @@ const Cart = () => {
         })
         .then((result) =>{
             setIdVenta(result.id);
-            
+            setShow(true);
         })
         
     }
     
+    
     return (
         <div>
-        <p >CARRITO DE COMPRAS</p>
+            <CustomModal show= {show} setShow = {setShow} idVenta = {idVenta}/>
+        
         {productos.length === 0
-            ? <p className="nombreproducto">No hay productos en el carrito <Link to="/">IR AL CATALOGO</Link></p> 
+            ?   <div className="vacio2">
+                    <p className="nombreproducto vacio">No hay productos en el carrito,<Link to="/">IR AL CATALOGO</Link></p>
+                </div> 
             : 
-            <div> 
-                {productos.map((producto) => 
-                <div key ={`${producto.id}`} className="ItemCarrito">
-                    <h2>{producto.nombre}</h2>
-                    <img src={producto.imagen} alt="remera" width="200px" />
-                    <p className="precio">${producto.precio}</p>
-                    <p>{producto.qty}</p>
-                    <button onClick={() => {eliminarProducto(producto.id)}}>eliminar item</button>
+                <div> 
+                    {productos.map((producto) => 
+                    <div key ={`${producto.id}`} className="ItemCarrito">
+                        <h2>{producto.nombre}</h2>
+                        <img src={producto.imagen} alt="remera" width="200px" />
+                        <p className="precio">${producto.precio}</p>
+                        <p>{producto.qty}</p>
+                        <button onClick={() => {eliminarProducto(producto.id)}}>eliminar item</button>
                     
                 </div>)}
                 
                 <div >
-                <ElementoPrecioFinal total={precioFinal()}/>
-                <div className="">
-                    <p>NUMERO DE ORDEN:    {idVenta} </p>
-                    <br />
-                    <FormularioDePago/>
-                    <button onClick={finalizarCompra}>Terminar Compra</button>
+                    <ElementoPrecioFinal total={precioFinal()}/>
+                    <div className="">
+                       
+                        <br />
+                        <FormularioDePago/> 
+                        <button onClick={finalizarCompra}>Terminar Compra  </button>
+                    </div>  
                 </div>
-                </div>
-                
-                
             </div>
+            
         }
         </div>
     )
+
+    
 }
 
 

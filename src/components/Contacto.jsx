@@ -14,7 +14,7 @@ const Contacto = () => {
 
 
     return (
-        <div>
+        <div className="formularioooo">
             
             <form className="formulario" onSubmit={handleSubmit(onSubmit)} >   
                 <div className="casillas">

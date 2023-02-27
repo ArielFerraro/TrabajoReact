@@ -1,8 +1,0 @@
-.espacioitems {
-   display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-wrap:wrap;
-    max-width: 27rem;
-    
-}

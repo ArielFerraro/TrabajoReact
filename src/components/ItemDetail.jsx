@@ -23,7 +23,7 @@ import "./item.css"
         }
         
         return (
-            <>  
+            <div className="detalle2">  
                 <div className="detalle">
                     <div>
                     <p className="nombreproducto">{detalle.nombre}</p>
@@ -38,7 +38,7 @@ import "./item.css"
                     : <ItemCount stock={10} onAdd={onAdd} />}
                     </div>
                 </div>
-            </>
+            </div>
         )
     }
 export default  ItemDetail
